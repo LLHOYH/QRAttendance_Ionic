@@ -1,5 +1,7 @@
 {
   "name": "QRAttendance",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
