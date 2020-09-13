@@ -1,0 +1,146 @@
+#content{
+    margin-top:15px;
+}
+
+.styleCenter{
+    height: auto;
+    width: auto;
+}
+
+//profile section css
+
+#profileCard{
+    background-color: #7acfb1;
+}
+
+
+#profileStyle{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+#nameLabel{
+    font-weight: bold;
+    font-size: small;
+}
+
+#adminNumLabel{
+    font-weight: bold;
+    font-size: x-small;
+}
+
+#avatarStyle{
+    background-color: white;
+}
+
+
+
+
+
+//lesson section css
+
+#reloadIcon{
+    font-size: 18px;
+}
+
+.reloadDiv{
+    margin: 16px 0px 10px auto;
+}
+
+.reloadDivNolesson{
+    margin: 0 0 0 auto;
+}
+
+
+.lessonItem{
+    margin: 24px 16px;
+    min-height: 100px;
+    border-radius: 8px;
+}
+
+.lessonItem ion-grid{
+    padding-top: 0px;
+}
+
+ion-spinner{
+    margin: auto;
+}
+
+
+//quote section css
+
+#quotesCard{
+    background-color: #609ee0;
+    color:white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+//general
+
+.marginLeftAuto{
+    margin:0 0 0 auto;
+}
+
+.borderless{
+    --ion-border-color: transparent !important;
+}
+
+#reloadRipple{
+    width: 22px;
+    height: 22px;
+}
+
+.ripple-parent {
+    position: relative;
+    overflow: hidden;
+}
+  
+.icons{
+    font-size: 50px;
+    color:#387539;
+}
+
+.fixedLabel{
+    font-size: x-small;
+    margin:5px 0;
+}
+
+.variableLabel{
+    font-size: medium;
+    font-weight: bold;
+    color:#57030c;
+}
+
+h5{
+    color:#7497cf;
+}
+
+ion-item{
+    --inner-padding-end: 0px;
+    --padding-start:0px
+}
+
+ion-skeleton-text{
+    background-color:#d4d4d4;
+}
+
+.displayFlex{
+    display: flex;
+}
+
+.marginAuto{
+    margin:auto;
+}
+
+.divContainer{
+    width: 100%;
+}
+
+.parentSize{
+ width: 100%;
+ height: 100%;
+}

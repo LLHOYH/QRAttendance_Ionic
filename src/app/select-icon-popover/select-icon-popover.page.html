@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Choose One
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="Done()" color="primary">
+        Done
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style="--background: white !important;">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item class="borderless">
+          <h5>Male</h5>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img class="profileIcons " id="male1"  src="../assets/ProfileImgs/male1.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="male2" src="../assets/ProfileImgs/male2.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="male3" src="../assets/ProfileImgs/male3.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img class="profileIcons " id="male4" src="../assets/ProfileImgs/male4.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="male5" src="../assets/ProfileImgs/male5.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="male6" src="../assets/ProfileImgs/male6.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="borderless">
+          <h5>Female</h5>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img class="profileIcons " id="female1" src="../assets/ProfileImgs/female1.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="female2" src="../assets/ProfileImgs/female2.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="female3" src="../assets/ProfileImgs/female3.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-img class="profileIcons " id="female4" src="../assets/ProfileImgs/female4.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="female5" src="../assets/ProfileImgs/female5.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img class="profileIcons " id="female6" src="../assets/ProfileImgs/female6.png" (click)="SetSelectedIcon($event)"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

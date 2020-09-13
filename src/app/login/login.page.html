@@ -1,0 +1,87 @@
+<ion-content padding scrollEvents="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <form [formGroup]="loginForm">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <ion-item class="items borderless">
+                  <ion-img src="../../assets/nyp.png">
+
+                  </ion-img>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="items">
+                  <ion-label position="floating">Admin Number: </ion-label>
+                  <ion-input start #adminNumber formControlName="adminNumber" type="text" (keyup)="CheckInputsValidity()">
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="error-messages">
+                  <ng-container *ngFor="let validation of error_messages.adminNumber">
+                    <div class="error-message"
+                      *ngIf="loginForm.get('adminNumber').hasError(validation.type) && (loginForm.get('adminNumber').dirty || loginForm.get('adminNumber').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="items">
+                  <ion-label position="floating">Password:</ion-label>
+                  <ion-input start #password formControlName="password" type="password" (keyup)="CheckInputsValidity()">
+                  </ion-input>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="error-messages">
+                  <ng-container *ngFor="let validation of error_messages.password">
+                    <div class="error-message"
+                      *ngIf="loginForm.get('password').hasError(validation.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+                      {{ validation.message }}
+                    </div>
+                  </ng-container>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="items borderless">
+                <ion-button id="registerBtn" type="submit" (click)="Login()" [disabled]="!btnClickable">Login</ion-button>
+              </ion-item>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-item class="items borderless linkToOther" text-center>
+                  <a class="regText" routerLink="/forget-password" routerDirection="forward">
+                    Forget Your Password?
+                  </a>
+                  |
+                  <a class="regText" routerLink="/register-admin-number" routerDirection="forward">
+                    Register Here
+                  </a>
+                </ion-item> 
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

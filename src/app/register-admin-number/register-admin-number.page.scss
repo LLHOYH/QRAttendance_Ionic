@@ -1,0 +1,61 @@
+
+.items{
+    height:100%;
+    vertical-align: middle;
+    --ion-background-color: transparent !important;
+
+}
+
+.titleItems{
+    --ion-background-color: transparent !important;
+}
+
+h2{
+    text-align: center;
+    width: 100%;
+    font-weight: bold;
+}
+
+.fillGrid{
+    height:10%;
+    background-color: transparent;
+}
+
+#centerGrid{
+    height:80%;
+    background-color: transparent;
+}
+
+#centerRow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.borderless{
+    --ion-border-color: transparent !important;
+}
+
+#circleIcon{
+    font-size: x-large;
+    color:white;
+}
+
+#circleIcon:hover{
+    color:#dcddde;
+}
+
+.error-messages {
+    font-size: 0.7em;
+    color: red;
+    text-align: center;
+}
+
+.fixedLabel{
+    font-size:small;
+}
+
+.fixedButton{
+    font-size:x-small;
+}

@@ -1,0 +1,55 @@
+.items{
+    height:100%;
+    vertical-align: middle;
+    --ion-background-color: transparent !important;
+
+}
+
+ion-grid{
+    height:100%;
+    background-color: transparent;
+}
+
+ion-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.borderless{
+    --ion-border-color: transparent !important;
+}
+
+.linkToOther{
+    color:white;
+    font-size: smaller;
+    margin:auto;
+    display:flex;
+}
+
+.regText{
+    margin:auto;
+    padding:0px;
+    text-align: center;
+    color:white;
+}
+
+#anchor{
+    color:white;
+}
+
+.error-messages {
+    font-size: 0.7em;
+    color: red;
+    text-align: center;
+}
+
+#registerBtn{
+    width:100%;
+    border-radius: 5px;
+    font-size: medium;
+    height: 35px;
+    border: 0px solid;
+}
+

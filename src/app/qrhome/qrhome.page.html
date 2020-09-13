@@ -1,0 +1,197 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding id="content" scrollEvents="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="styleCenter">
+          <ion-img src="../assets/nyp.png"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card id="profileCard">
+    <ion-card-content>
+      <ion-row>
+        <ion-col size="3">
+          <ion-avatar class="styleCenter" id="avatarStyle">
+            <ion-img id="profileStyle" src="{{profileImgPath}}" alt="Image Not Found"></ion-img>
+          </ion-avatar>
+        </ion-col>
+
+        <ion-col size="6">
+          <div>
+            <ion-row>
+              <ion-col>
+                <!--Actual student name-->
+                <ion-label id="nameLabel" *ngIf="allLoaded">{{studentName}}</ion-label>
+                <!--skeleton text for student name-->
+                <ion-skeleton-text *ngIf="!allLoaded" animated style="width: 80%; height: 20px;"></ion-skeleton-text>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <ion-label id="adminNumLabel">
+                  Admin No.: {{adminNum}}</ion-label>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+
+        <ion-col size="3">
+          <div class="styleCenter ion-activatable ripple-parent" (click)="TestScannerAvailability()">
+            <svg height="80%" width="80%" viewBox="-33 -33 1066.6666 1066.6666" xmlns="http://www.w3.org/2000/svg">
+              <path style="fill:green;" id="scannerSvg"
+                d="m56.574219 150.324219c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875v-123.046875c0-16.183594 13.113281-29.296875 29.296875-29.296875h123.039062c16.183594 0 29.296875 13.113281 29.296875 29.296875 0 16.179687-13.113281 29.296875-29.296875 29.296875h-93.742187zm404.296875 628.90625c-16.183594 0-29.296875-13.117188-29.296875-29.296875 0-16.183594 13.113281-29.296875 29.296875-29.296875h25.390625c16.179687 0 29.296875 13.113281 29.296875 29.296875 0 16.179687-13.117188 29.296875-29.296875 29.296875zm21.484375-390.625c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875v-25.390625c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875zm179.6875 328.125c-16.183594 0-29.296875-13.117188-29.296875-29.296875 0-16.183594 13.113281-29.296875 29.296875-29.296875h25.390625c16.179687 0 29.296875 13.113281 29.296875 29.296875 0 16.179687-13.117188 29.296875-29.296875 29.296875zm-604.492188-189.453125h136.328125c-.390625 1.894531-.585937 3.851562-.585937 5.859375v87.890625c0 16.179687 13.113281 29.296875 29.296875 29.296875 16.179687 0 29.296875-13.117188 29.296875-29.296875v-87.890625c0-2.007813-.195313-3.964844-.585938-5.859375h258.398438v33.203125h-154.296875c-16.183594 0-29.296875 13.113281-29.296875 29.296875 0 16.179687 13.113281 29.296875 29.296875 29.296875h183.59375c16.179687 0 29.296875-13.117188 29.296875-29.296875v-62.5h109.375v85.9375c0 16.179687 13.113281 29.296875 29.296875 29.296875 16.179687 0 29.296875-13.117188 29.296875-29.296875v-85.9375h202.148437c16.179688 0 29.296875-13.117188 29.296875-29.296875 0-16.183594-13.117187-29.296875-29.296875-29.296875h-133.789062v-56.640625h29.296875c16.179687 0 29.296875-13.117188 29.296875-29.296875 0-16.183594-13.117188-29.296875-29.296875-29.296875h-146.484375c-16.183594 0-29.296875 13.113281-29.296875 29.296875 0 16.179687 13.113281 29.296875 29.296875 29.296875h58.59375v56.640625h-177.734375v-76.171875c0-16.183594-13.117188-29.296875-29.296875-29.296875-16.183594 0-29.296875 13.113281-29.296875 29.296875v76.171875h-452.148438c-16.183593 0-29.296875 13.113281-29.296875 29.296875 0 16.179687 13.113282 29.296875 29.296875 29.296875zm506.835938-359.375c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875v154.296875c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875zm-173.828125 11.71875h66.40625v-11.71875c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875v97.65625c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875v-27.34375h-66.40625v13.671875c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875v-83.984375c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875zm-234.382813 230.46875c-16.175781 0-29.296875-13.117188-29.296875-29.296875 0-16.183594 13.121094-29.296875 29.296875-29.296875h216.804688c16.179687 0 29.296875 13.113281 29.296875 29.296875 0 16.179687-13.117188 29.296875-29.296875 29.296875zm638.679688 388.671875v29.296875c0 16.179687 13.113281 29.296875 29.296875 29.296875 16.179687 0 29.296875-13.117188 29.296875-29.296875v-175.78125c0-16.171875-13.117188-29.296875-29.296875-29.296875-16.183594 0-29.296875 13.125-29.296875 29.296875v87.890625h-97.65625c-16.183594 0-29.296875 13.125-29.296875 29.296875 0 16.179687 13.113281 29.296875 29.296875 29.296875zm-298.828125 58.59375h87.890625c16.179687 0 29.296875-13.117188 29.296875-29.296875v-150.390625c0-16.183594-13.117188-29.296875-29.296875-29.296875-16.183594 0-29.296875 13.113281-29.296875 29.296875v121.09375h-58.59375c-16.183594 0-29.296875 13.113281-29.296875 29.296875 0 16.179687 13.113281 29.296875 29.296875 29.296875zm-162.109375-177.734375c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875v85.9375c0 16.179687-13.117188 29.296875-29.296875 29.296875-16.183594 0-29.296875-13.117188-29.296875-29.296875zm-177.734375-3.90625h123.046875c16.179687 0 29.296875 13.113281 29.296875 29.296875v123.046875c0 16.179687-13.117188 29.296875-29.296875 29.296875h-123.046875c-16.183594 0-29.296875-13.117188-29.296875-29.296875v-123.046875c0-16.183594 13.113281-29.296875 29.296875-29.296875zm93.75 58.59375h-64.453125v64.453125h64.453125zm466.796875-595.703125h123.046875c16.179687 0 29.296875 13.113281 29.296875 29.296875v123.046875c0 16.179687-13.117188 29.296875-29.296875 29.296875h-123.046875c-16.183594 0-29.296875-13.117188-29.296875-29.296875v-123.046875c0-16.183594 13.113281-29.296875 29.296875-29.296875zm93.75 58.59375h-64.453125v64.453125h64.453125zm-654.296875-58.59375c-16.183594 0-29.296875 13.113281-29.296875 29.296875v123.046875c0 16.179687 13.113281 29.296875 29.296875 29.296875h123.046875c16.179687 0 29.296875-13.117188 29.296875-29.296875v-123.046875c0-16.183594-13.117188-29.296875-29.296875-29.296875zm93.75 58.59375v64.453125h-64.453125v-64.453125zm689.453125 648.4375c0-16.183594 13.113281-29.296875 29.296875-29.296875 16.179687 0 29.296875 13.113281 29.296875 29.296875v123.046875c0 16.179687-13.117188 29.296875-29.296875 29.296875h-123.042969c-16.175781 0-29.296875-13.117188-29.296875-29.296875 0-16.183594 13.121094-29.296875 29.296875-29.296875h93.746094zm-941.40625 0v123.046875c0 16.179687 13.113281 29.296875 29.296875 29.296875h123.039062c16.183594 0 29.296875-13.117188 29.296875-29.296875 0-16.183594-13.113281-29.296875-29.296875-29.296875h-93.742187v-93.75c0-16.183594-13.117188-29.296875-29.296875-29.296875-16.183594 0-29.296875 13.113281-29.296875 29.296875zm1000-695.3125v-123.046875c0-16.183594-13.117188-29.296875-29.296875-29.296875h-123.042969c-16.175781 0-29.296875 13.113281-29.296875 29.296875 0 16.179687 13.121094 29.296875 29.296875 29.296875h93.746094v93.75c0 16.179687 13.113281 29.296875 29.296875 29.296875 16.179687 0 29.296875-13.117188 29.296875-29.296875zm0 0"
+                fill-rule="evenodd" />
+            </svg>
+            <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+          </div>
+        </ion-col>
+
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
+  <!--lesson section Code here-->
+  <ion-item class="borderless lessonItem displayFlex">
+
+    <!--Actual lesson section-->
+    <div class="displayFlex divContainer" *ngIf="allLoaded && !lessonRefreshing">
+      <ion-grid *ngIf="lessonReplaceText==null else lessonReplaceTemplate">
+        <ion-row>
+          <ion-col size="8">
+            <h5>{{lessonSectionTitle}}</h5>
+          </ion-col>
+          <ion-col size="4">
+            <div class="parentSize displayFlex reloadDiv ion-activatable ripple-parent">
+              <ion-icon id="reloadIcon" class="marginLeftAuto" name="reload" (click)="RefreshLesson()">
+              </ion-icon>
+              <ion-ripple-effect id="reloadRipple" class="marginLeftAuto" type="unbounded"></ion-ripple-effect>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-label class="variableLabel">{{lesson?.ModuleName}}</ion-label>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-label class="fixedLabel">Lesson Time:</ion-label>
+            <ion-label class="variableLabel">{{lesson?.LessonTime}}</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label class="fixedLabel">Lesson Venue:</ion-label>
+            <ion-label class="variableLabel">{{lesson?.LessonVenue}}</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-label class="fixedLabel">Lesson Type:</ion-label>
+            <ion-label class="variableLabel">{{lesson?.LessonType}}</ion-label>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ng-template #lessonReplaceTemplate class="marginAuto displayFlex">
+
+        <ion-grid>
+          <ion-row>
+            <ion-col class="displayFlex" style="padding: 0;height: 31px;">
+              <div class="parentSize displayFlex reloadDivNolesson ion-activatable ripple-parent">
+                <ion-icon id="reloadIcon" class="marginLeftAuto" name="reload" (click)="RefreshLesson()">
+                </ion-icon>
+                <ion-ripple-effect id="reloadRipple" class="marginLeftAuto" type="unbounded"></ion-ripple-effect>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="height: 31px;" class="marginAuto displayFlex">
+              <h5 class="marginAuto">{{lessonReplaceText}}</h5>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col style="height: 31px;">
+
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+      </ng-template>
+
+    </div>
+
+    <ion-spinner name="crescent" class="marginAuto" *ngIf="lessonRefreshing"></ion-spinner>
+
+
+    <!--skeleton lesson section-->
+    <div class="displayFlex divContainer" *ngIf="!allLoaded">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-skeleton-text animated style="width: 60%; height: 20px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4">
+          <ion-skeleton-text animated style="height: 5px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="4">
+          <ion-skeleton-text animated style="height: 5px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        </ion-col>
+        <ion-col size="4">
+          <ion-skeleton-text animated style="height: 5px;"></ion-skeleton-text>
+          <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  </ion-item>
+
+
+  
+  <!--Quote section Code here-->
+  <ion-card id="quotesCard" >
+
+  <!--Actual Quote Section-->
+    <div *ngIf="allLoaded" class="divContainer">
+      <ion-card-header style="font-weight: bold;">
+        Quote Of The Day
+      </ion-card-header>
+      <ion-card-content>
+        {{quoteText}}
+        <p style="text-align: end;">-- {{quoteAuthor}}</p>
+      </ion-card-content>
+    </div>
+
+  <!--skeleton Quote Section-->
+    <div *ngIf="!allLoaded" class="divContainer">
+      <ion-card-header>
+        <ion-skeleton-text animated style="width: 60%; height: 18px;"></ion-skeleton-text>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+        <ion-skeleton-text animated style="height: 15px;"></ion-skeleton-text>
+      </ion-card-content>
+    </div>
+
+  </ion-card>
+
+</ion-content>

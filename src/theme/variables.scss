@@ -3,6 +3,18 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+
+  ion-popover{
+    .popover-wrapper{
+      .popover-content{
+        width:80vw;
+        max-width:500px;
+      }
+    }
+
+  }
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -182,6 +194,20 @@
     --ion-toolbar-background: #0d0d0d;
 
     --ion-item-background: #000000;
+
+
+
+
+    ion-title.title-large {
+      --color: white;
+    }
+  
+      $loading-ios-background: transparent;
+      $loading-md-background: $loading-ios-background;
+      $loading-wp-background: $loading-ios-background;
+      $loading-md-box-shadow: none;
+
+
   }
 
 
@@ -226,7 +252,17 @@
     --ion-tab-bar-background: #1f1f1f;
   }
 
+
+
   ion-title.title-large {
     --color: white;
   }
+
+    $loading-ios-background: transparent;
+    $loading-md-background: $loading-ios-background;
+    $loading-wp-background: $loading-ios-background;
+    $loading-md-box-shadow: none;
+
+
 }
+

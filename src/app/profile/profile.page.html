@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Me</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding [scrollEvents]="false">
+
+  
+  <ion-list lines="none" id="profileList">
+    <ion-item lines="inset" button (click)="SelectIcons($event)">
+      <ion-thumbnail slot="end">
+        <img class="profilePic" src="{{profileImgPath}}">
+      </ion-thumbnail>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="fixedLabels" slot="start">
+        Name:
+      </ion-label>
+      <ion-note slot="end">
+        {{student?.FullName}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label class="fixedLabels" slot="start">
+        Admin Number:
+      </ion-label>
+      <ion-note slot="end">
+        {{student?.AdminNumber}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label class="fixedLabels" slot="start">
+        Diploma:
+      </ion-label>
+      <ion-note slot="end">
+        {{student?.Diploma}}
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label class="fixedLabels">
+        Chances left to change device:
+      </ion-label>
+      <ion-note slot="end">
+        {{overwriteDeviceChance}}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list id="bottomList" lines="none" >
+    <ion-item class="btnWrapper">
+      <ion-button class="fullExtendBtn" id="changePwBtn" routerLink="/tabs/change-password" routerDirection="forward" fill="outline" color="primary">
+        Change Password
+      </ion-button>
+    </ion-item>
+    <ion-item class="btnWrapper" (click)="PresentConfirmLogout()">
+      <ion-button class="fullExtendBtn" id="logOutBtn" fill="outline" color="danger">
+        Log out
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

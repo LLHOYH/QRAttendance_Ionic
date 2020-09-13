@@ -24,3 +24,30 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+ion-back-button{
+    --color: white !important;
+  }
+
+  ion-app.scannerView, ion-app.scannerView ion-content, ion-app.scannerView .nav-decor{
+    --background: transparent none !important; 
+  }
+
+  * ::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    -webkit-user-select: text;
+    user-select:text;
+}
+
+ion-app ion-content{  //sets background page for all pages without using tabs (login, register etc)
+  //--background: url(assets/Backgrounds/wallBG.jpg)  repeat;
+  --background: url(assets/Backgrounds/blueWall.jpg) 0 0/100% 100% no-repeat;
+
+}
+
+ion-app ion-tabs ion-content{ //sets background page for all pages using tabs (qrhome, profile etc)
+  --background: url(assets/Backgrounds/bicycleBG.jpg)  repeat !important;
+}
