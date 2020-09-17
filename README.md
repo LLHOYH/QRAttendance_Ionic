@@ -13,3 +13,7 @@ Staff (Teacher): Use QRAttendance website to initiate lesson and view attendance
 # Note
 
 This app is being built by me when serving a 3-month part time in Nanyang Polytechnic as developer.
+
+
+# Feature Branch Note
+Hello im here
